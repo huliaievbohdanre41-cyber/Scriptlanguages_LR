@@ -20,6 +20,13 @@
                 @enderror
             </div>
             <div style="margin-bottom: 20px;">
+                <label for="phone" style="display: block; font-weight: bold; margin-bottom: 8px; color: #000000;">Номер телефону</label>
+                <input type="text" id="phone" name="phone" value="{{ old('phone') }}" placeholder="+380" style="width: 100%; padding: 10px; border: 1px solid {{ $errors->has('phone') ? '#d9534f' : '#000000' }}; border-radius: 2px; box-sizing: border-box; font-size: 15px;">
+                @error('phone')
+                <span style="color: #d9534f; font-size: 14px; margin-top: 5px; display: block;">{{ $message }}</span>
+                @enderror
+            </div>
+            <div style="margin-bottom: 20px;">
                 <label for="message" style="display: block; font-weight: bold; margin-bottom: 5px;">Повідомлення *</label>
                 <textarea id="message" name="message" rows="4" style="width: 100%; padding: 8px; border: 1px solid #000; box-sizing: border-box;">{{ old('message') }}</textarea>
                 @error('message')

@@ -8,6 +8,9 @@
         <div style="text-align: left; margin: 20px 0;">
             <p><strong>Відправник:</strong> {{ $name }}</p>
             <p><strong>Email:</strong> {{ $email }}</p>
+            @if(!empty($phone))
+                <p><strong>Телефон:</strong> {{ $phone }}</p>
+            @endif
             <p><strong>Повідомлення:</strong> {{ $message }}</p>
         </div>
 
