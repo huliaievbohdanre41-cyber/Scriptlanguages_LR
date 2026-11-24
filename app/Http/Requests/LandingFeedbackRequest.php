@@ -9,7 +9,7 @@ class LandingFeedbackRequest extends FormRequest
         return [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email', 'max:255'],
-            'phone' => ['nullable', 'string', 'max:20', 'regex:/^\+?380\d{9}$/'], // Додано поле телефону з валідацією
+            'phone' => ['nullable', 'string', 'max:15', 'regex:/^\+?380\d{9}$/'], // Додано поле телефону з валідацією
             'message' => ['required', 'string', 'min:10'],
         ];
     }

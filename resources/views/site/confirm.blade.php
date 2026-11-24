@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Підтвердження звернення — Університет')
+@section('title', 'Підтвердження звернення')
 @section('content')
     <div style="max-width: 650px; margin: 0 auto; text-align: left;">
         <h1 style="text-align: center; margin-bottom: 10px;">

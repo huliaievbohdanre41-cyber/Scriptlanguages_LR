@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Лендінг — ' . $universityName)
+@section('title', 'Звернення до нас ' . $universityName)
 @section('content')
     <div style="max-width: 700px; margin: 0 auto; text-align: left;">
         <h1 style="margin-bottom: 10px; text-align: center;"> 🏛️ {{ $universityName }} </h1>

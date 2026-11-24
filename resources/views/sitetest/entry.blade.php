@@ -6,16 +6,14 @@
         @csrf
         <div>
             <label for="name">Ім'я</label>
-            <input type="text" id="name" name="name" value="{{ old('name')
-}}">
+            <input type="text" id="name" name="name" value="{{ old('name')}}">
             @error('name')
             <p class="error" style="color: red;">{{ $message }}</p>
             @enderror
         </div>
         <div>
             <label for="email">Email</label>
-            <input type="text" id="email" name="email" value="{{ old('email')
-}}">
+            <input type="text" id="email" name="email" value="{{ old('email')}}">
             @error('email')
             <p class="error" style="color: red;">{{ $message }}</p>
             @enderror

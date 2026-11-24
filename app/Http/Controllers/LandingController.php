@@ -12,7 +12,6 @@ class LandingController extends Controller
     public function store(LandingFeedbackRequest $request)
     {
         $validated = $request->validated();
-
         return view('site.confirm', $validated);
     }
 }
