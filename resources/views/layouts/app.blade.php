@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>@yield('title', 'Університет')</title>
+    <style>
+        nav[role="navigation"] svg,
+        nav[role="navigation"] a[rel="prev"],
+        nav[role="navigation"] a[rel="next"],
+        nav[role="navigation"] span[aria-label*="Previous"],
+        nav[role="navigation"] span[aria-label*="Next"],
+        nav[role="navigation"] > div:first-child,
+        nav[role="navigation"] > div > div:first-child {
+            display: none !important;
+        }
+    </style>
 </head>
 <body style="margin: 0; min-height: 100vh; display: flex; flex-direction: column; font-family: Arial, sans-serif; background-color: #f0f4f8; color: #000000;">
 <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; border-bottom: 2px solid #0b1f3a; background-color: #ffffff;">
@@ -13,7 +24,7 @@
     <nav style="display: flex; gap: 30px;">
         <a href="{{ url('/') }}" style="color: #000000; text-decoration: none; font-weight: bold; font-size: 16px;">Головна</a>
         <a href="{{ url('/landing') }}" style="color: #000000; text-decoration: none; font-weight: bold; font-size: 16px;">Зворотний зв'язок</a>
-        <a href="{{ url('/contact') }}" style="color: #000000; text-decoration: none; font-weight: bold; font-size: 16px;">Викладачі</a>
+        <a href="{{ route('teachers.index') }}" style="color: #000000; text-decoration: none; font-weight: bold; font-size: 16px;">Викладачі</a>
         <a href="{{ url('/about') }}" style="color: #000000; text-decoration: none; font-weight: bold; font-size: 16px;">Студентам</a>
     </nav>
 </header>
