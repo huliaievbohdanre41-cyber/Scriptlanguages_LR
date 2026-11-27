@@ -26,6 +26,7 @@
         <a href="{{ url('/landing') }}" style="color: #000000; text-decoration: none; font-weight: bold; font-size: 16px;">Зворотний зв'язок</a>
         <a href="{{ route('teachers.index') }}" style="color: #000000; text-decoration: none; font-weight: bold; font-size: 16px;">Викладачі</a>
         <a href="{{ url('/about') }}" style="color: #000000; text-decoration: none; font-weight: bold; font-size: 16px;">Студентам</a>
+        <a href="{{ route('stats.pages') }}" style="color: #000000; text-decoration: none; font-weight: bold; font-size: 16px;">Статистика</a>
     </nav>
 </header>
 <main style="flex: 1; padding: 50px; color: #000000;">@yield('content')</main>
