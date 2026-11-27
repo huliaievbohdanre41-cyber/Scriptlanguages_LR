@@ -5,7 +5,11 @@ use App\Http\Controllers\SiteController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\StatsController;
+use App\Http\Middleware\TrackVisit;
 
+Route::get('/stats/detail', [StatsController::class, 'detail'])->name('stats.detail');
+Route::get('/stats', [StatsController::class, 'pages'])->name('stats.pages');
 Route::resource('teachers', TeacherController::class);
 Route::resource('country', CountryController::class);
 Route::get('/', function () { return view('welcome');});
@@ -16,3 +20,5 @@ Route::view('/about','site.about')->name('site.about');
 Route::view('/contact','site.contact')->name('site.contact');
 Route::get('/landing', [LandingController::class, 'index'])->name('landing.index');
 Route::post('/landing', [LandingController::class, 'store'])->name('landing.store');
+Route::get('/', function () {return view('welcome');});
+Route::get('/stats/activity', [StatsController::class, 'activity'])->name('stats.activity');
