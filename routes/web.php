@@ -3,7 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\CountryController;
+use App\Http\Controllers\TeacherController;
 
+Route::resource('teachers', TeacherController::class);
+Route::resource('country', CountryController::class);
 Route::get('/', function () { return view('welcome');});
 Route::get('/say/{message?}',[SiteController::class, 'say'])->name('site.say');
 Route::get('/entry',[SiteController::class, 'entry'])->name('entry.form');
